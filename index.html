@@ -13,29 +13,43 @@
 	<!-- Barra de navegación-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="/">Naty App</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+			aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
 		</button>
-	  </nav>
+	</nav>
 
-	  <!-- Aplicación-->
-	  <div class="container">
-		  <div id="app" class="row pt-5">
-			  <div class="col-md-4">
+	<!-- Aplicación-->
+	<div class="container">
+		<div id="app" class="row pt-5">
+			<div class="col-md-4">
 				<div class="card">
 					<div class="card header">
 						<h4>Agregar producto</h4>
 					</div>
 					<form id="product-form" class="card-body">
-						
+							<div class="form-group">
+									<input type="text" id="name" class="form-control" placeholder="Product name">
+								</div>
+				
+								<div class="form-group">
+									<input type="number" id="price" step="0.01" class="form-control" placeholder="Product price">
+								</div>
+				
+								<div class="form-group">
+									<input type="number" id="year" class="form-control" placeholder="Product year" min="1900" value="2019" max="2030">
+								</div>
+
+								<input type="submit" value="Save" class="btn btn-primary btn-block">
 					</form>
 				</div>
-			  </div>
-			  <div class="col-md-8">
-
-			  </div>
-		  </div>
-	  </div>
+			</div>
+			<div id="product-list" class="col-md-8">
+			
+			</div>
+		</div>
+	</div>
+	<script src="app.js"></script>
 </body>
 
 </html>
