@@ -28,9 +28,16 @@ class UI {
 	resetForm(){
 		document.getElementById('product-form').reset();
 	}
+
+	deleteProduct(element){
+		if(element.name === 'delete'){
+			// to access to its parent elements and delete it (element = product)
+			element.parentElement.parentElement.parentElement.remove();
+		}
+	}
 }
 
-function obtenerDatos(e) {
+function getData(e) {
 	let name = document.getElementById('name').value;
 	let price = document.getElementById('price').value;
 	let year = document.getElementById('year').value;
@@ -40,5 +47,12 @@ function obtenerDatos(e) {
 	e.preventDefault();
 }
 
+function deleteData(e){
+	let ui = new UI();
+	ui.deleteProduct(e.target);
+}
+
 // DOM Events
-document.getElementById('product-form').addEventListener('submit', obtenerDatos);
+document.getElementById('product-form').addEventListener('submit', getData);
+
+document.getElementById('product-list').addEventListener('click', deleteData);
