@@ -16,7 +16,8 @@ class UI {
                 <div class="card-body">
                 <strong> Producto name: </strong> ${product.name}
                 <strong> Producto price: </strong> ${product.price}
-                <strong> Producto year: </strong> ${product.year}
+				<strong> Producto year: </strong> ${product.year}
+				<a href="#" class="btn btn-danger" name="delete">Delete</a>
                 </div>
         </div>
 		`;
