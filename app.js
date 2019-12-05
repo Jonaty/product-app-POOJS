@@ -58,6 +58,9 @@ function getData(e) {
 	let year = document.getElementById('year').value;
 	let product = new Product(name, price, year);
 	let ui = new UI();
+	if(name === '' || price === '' || year === ''){
+		return ui.showMessage('Please complete fields', 'warning');
+	}
 	ui.addProduct(product);
 	ui.showMessage('Product added successfully', 'success');
 	e.preventDefault();
